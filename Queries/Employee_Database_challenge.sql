@@ -33,13 +33,39 @@ SELECT DISTINCT ON (emp_no) e.emp_no,
 	de.from_date,
 	de.to_date,
 	t.title
-INTO mentorship_eligibility
+INTO mentorship_eligibility_exp
 FROM employees as e
 	LEFT JOIN dept_emp as de
 		ON e.emp_no = de.emp_no
 	INNER JOIN titles as t
 		ON e.emp_no = t.emp_no
-WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+WHERE (e.birth_date BETWEEN '1964-01-01' AND '1966-12-31')
 AND de.to_date = ('9999-01-01')
 ORDER BY emp_no, to_date DESC;
-SELECT * FROM mentorship_eligibility
+SELECT * FROM mentorship_eligibility_exp
+
+SELECT DISTINCT ON (emp_no) e.emp_no,
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date,
+	t.title
+INTO mentorship_eligibility_exp
+FROM employees as e
+	LEFT JOIN dept_emp as de
+		ON e.emp_no = de.emp_no
+	INNER JOIN titles as t
+		ON e.emp_no = t.emp_no
+WHERE (e.birth_date BETWEEN '1964-01-01' AND '1966-12-31')
+AND de.to_date = ('9999-01-01')
+ORDER BY emp_no, to_date DESC;
+SELECT * FROM mentorship_eligibility_exp
+
+SELECT ut.emp_no,
+	ut.first_name,
+	ut.last_name,
+	ut.title
+INTO retiring_senior
+FROM unique_titles as ut
+WHERE title LIKE 'Senior%';
