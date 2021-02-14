@@ -7,7 +7,8 @@
 
 Following are the most pertinent findings from the queries that were conducted:
 - From the unique_titles.csv database we find that there are **90,398** employees that will be retiring in the near future from HP.
-- From the retiring_titles.csv file we see some results that are a little concerning. We are able to ascertain that a large number of retirees will be from senior level positions, almost 64%. The largest number at the Senior Engineer level followed very closely by Senior Staff. See below for the acual numbers.
+- From the retiring_titles.csv file we see some results that are a little concerning. We are able to ascertain that a large number of retirees will be from senior level positions, almost 64%. The largest number at the Senior Engineer level followed very closely by Senior Staff. See below for the actual numbers.
+ 
  ![Total Retirees by Title](/Queries/retiring_titles.PNG)
 - On the plus side, the company may only be loosing tow managers to retirement. 
 
