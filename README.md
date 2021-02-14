@@ -31,4 +31,5 @@ Following are the most pertinent findings from the queries that were conducted:
     ut.title
    INTO retiring_senior
    FROM unique_titles as ut
-   WHERE title LIKE 'Senior%';```
+   WHERE title LIKE 'Senior%';
+   ```
